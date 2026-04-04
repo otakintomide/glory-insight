@@ -30,14 +30,14 @@ export interface Report {
   reporting_period: string;
   publish_date: string;
   cover_image_url: string;
-  /** Optional banner path from `reportsData.image`; preferred by UI when set. */
+  /** Optional banner path from `src/data/reports.ts` (`image`); preferred by UI when set. */
   image?: string | null;
   executive_summary: string;
   key_metrics: KeyMetric[];
   content_sections: ContentSection[];
   is_featured: boolean;
   pdf_url: string | null;
-  /** Canonical public permalink from `reportsData` (`url` field); optional. */
+  /** Canonical public permalink from `src/data/reports.ts` (`url`); optional. */
   public_url?: string | null;
   related_reports?: string[];
   tags?: string[];

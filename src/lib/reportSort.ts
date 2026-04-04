@@ -30,13 +30,17 @@ export function normalizePublishTimeMs(
   return 0;
 }
 
-export function isReportComingSoon(status: Report['status'] | undefined): boolean {
-  return status === 'coming_soon';
+/** Supports UI `Report.status` and pipeline `reports.ts` (`Coming Soon` / `Published`). */
+export function isReportComingSoon(status: Report['status'] | string | undefined): boolean {
+  if (status == null) return false;
+  if (status === 'coming_soon' || status === 'Coming Soon') return true;
+  return false;
 }
 
 type SortableReportSlice = {
   publish_date: string;
-  status?: Report['status'];
+  /** UI `published` | `coming_soon` or pipeline `Published` | `Coming Soon` */
+  status?: string;
   year?: number;
   id?: string;
 };
@@ -66,10 +70,11 @@ export function sortUiReportsForDisplay<T extends SortableReportSlice>(reports: 
   return [...reports].sort(compareReportsDisplayOrder);
 }
 
+/** Config rows from `src/data/reports.ts` (`Published` | `Coming Soon`) or legacy snake_case. */
 export interface GloryReportSortable {
   id: string;
   publishDate: string;
-  status: 'published' | 'coming_soon';
+  status: string;
   year: number;
 }
 

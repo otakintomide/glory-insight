@@ -4,7 +4,7 @@
  */
 
 export const gloryAssets = {
-  /** Default hero/fallback visual; primary report art should come from `reportsData` / featured cover. */
+  /** Default hero/fallback visual; primary report art should come from `src/data/reports.ts` / featured cover. */
   heroBanner: '/images/glory-insight-hero.svg',
 } as const;
 

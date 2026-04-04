@@ -5,36 +5,26 @@ import {
   selectFeaturedReport,
   sortReportsForDisplay,
   reportSlug,
-  type GloryReport,
-} from '../data/reportsData';
+  type InsightReport,
+} from '../data/reports';
 
 /**
- * All report-driven UI reads from `src/data/reportsData.ts` (`REPORTS`).
+ * All report-driven UI reads from `src/data/reports.ts` (`REPORTS`).
  */
 
-function resolveReportPdfUrl(entry: GloryReport): string | null {
-  const direct = entry.pdfUrl?.trim();
-  if (direct) return direct;
-  const file = entry.pdf?.trim();
-  if (!file) return null;
-  if (file.startsWith('/') || /^https?:\/\//i.test(file)) return file;
-  return `/reports/${file}`;
-}
-
-function toReport(entry: GloryReport): Report {
+function toReport(entry: InsightReport): Report {
   const slug = reportSlug(entry);
-  const pdfUrl = resolveReportPdfUrl(entry);
+  const pdfUrl = entry.pdfUrl?.trim() || null;
   const imageTrimmed = entry.image?.trim() ?? '';
-  const coverImageUrl = imageTrimmed;
 
   return {
     id: entry.id,
     title: entry.title,
     slug,
-    type: entry.type,
+    type: entry.type === 'Quarterly' ? 'quarterly' : 'monthly',
     reporting_period: entry.period,
     publish_date: entry.publishDate,
-    cover_image_url: coverImageUrl,
+    cover_image_url: imageTrimmed,
     image: imageTrimmed || null,
     executive_summary: entry.summary,
     key_metrics: [],
@@ -42,9 +32,9 @@ function toReport(entry: GloryReport): Report {
     is_featured: entry.featured,
     pdf_url: pdfUrl,
     public_url: entry.url,
-    status: entry.status === 'coming_soon' ? 'coming_soon' : 'published',
+    status: entry.status === 'Coming Soon' ? 'coming_soon' : 'published',
     tags: [],
-    read_time: entry.readTime ?? 0,
+    read_time: 0,
     year: entry.year,
     created_at: `${entry.publishDate}T00:00:00Z`,
     updated_at: `${entry.publishDate}T00:00:00Z`,
@@ -105,8 +95,7 @@ export const useReport = (slug: string | undefined) => {
 
     try {
       setLoading(true);
-      const entry =
-        REPORTS.find((r) => reportSlug(r) === slug) ?? null;
+      const entry = REPORTS.find((r) => reportSlug(r) === slug) ?? null;
       setReport(entry ? toReport(entry) : null);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load report');
