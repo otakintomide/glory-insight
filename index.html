@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/images/glory-insight-hero.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glory Insight · Official reporting · Glory Universe</title>
+    <meta name="description" content="Official Glory Insight publications and strategic reporting for the Glory Universe." />
+    <meta property="og:title" content="Glory Insight · Official reporting · Glory Universe" />
+    <meta property="og:description" content="Official Glory Insight publications and strategic reporting for the Glory Universe." />
+    <meta property="og:image" content="/images/q1-report-banner.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Glory Insight · Official reporting · Glory Universe" />
+    <meta name="twitter:image" content="/images/q1-report-banner.jpg" />
+    <script>
+      (function () {
+        var path = window.location.pathname || '';
+        if (path === '/' || path === '' || path === '/index.html') return;
+        var base = path.replace(/^\/+|\/+$/g, '');
+        if (!base) return;
+        window.location.replace('/#/' + base + (window.location.search || ''));
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

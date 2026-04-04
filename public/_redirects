@@ -1,0 +1,3 @@
+# Cloudflare Pages — SPA fallback (hash router + clean paths)
+# Serves index.html for non-file routes so the client can run the path→hash shim.
+/*    /index.html   200

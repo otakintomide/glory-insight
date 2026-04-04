@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* —— Glory Insight design tokens (Glory Universe / GCAT alignment) —— */
+:root {
+  --glory-void: #050810;
+  --glory-cosmos: #0a0f1a;
+  --glory-navy: #0f1629;
+  --glory-navy-deep: #121d33;
+  --glory-panel: rgba(15, 22, 38, 0.72);
+  --glory-panel-elevated: rgba(18, 28, 48, 0.55);
+  --glory-border: rgba(201, 162, 39, 0.14);
+  --glory-border-strong: rgba(201, 162, 39, 0.28);
+  --glory-border-subtle: rgba(148, 163, 184, 0.12);
+  --glory-gold: #d4af37;
+  --glory-gold-deep: #b8941f;
+  --glory-gold-muted: rgba(212, 175, 55, 0.45);
+  --glory-gold-glow-faint: rgba(212, 175, 55, 0.06);
+  --glory-text: #f4f4f5;
+  --glory-text-muted: #a1a1aa;
+  --glory-text-soft: #71717a;
+  --glory-radial-hero: radial-gradient(ellipse 85% 55% at 50% -15%, rgba(212, 175, 55, 0.09), transparent 55%);
+  --glory-radial-section: radial-gradient(ellipse 70% 40% at 50% 0%, rgba(15, 23, 42, 0.5), transparent 60%);
+  --glory-linear-base: linear-gradient(180deg, var(--glory-void) 0%, var(--glory-cosmos) 45%, var(--glory-void) 100%);
+  --glory-shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 40px rgba(0, 0, 0, 0.35);
+  --glory-shadow-panel-hover: 0 1px 0 rgba(255, 255, 255, 0.05) inset, 0 16px 48px rgba(0, 0, 0, 0.45);
+  --glory-shadow-gold: 0 4px 24px rgba(212, 175, 55, 0.18);
+  --glory-shadow-gold-lg: 0 8px 32px rgba(212, 175, 55, 0.22);
+  --glory-space-section-y: 6rem;
+  --glory-radius-card: 0.875rem;
+  --glory-radius-hero: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: var(--glory-void);
+    color: var(--glory-text-muted);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+    color: var(--glory-text);
+  }
+
+  h1 {
+    @apply text-5xl md:text-7xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glory-page-bg {
+    background: var(--glory-linear-base);
+  }
+
+  .glory-hero-ambient {
+    background: var(--glory-radial-hero);
+  }
+
+  .glory-grid-fine {
+    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.09) 1px, transparent 0);
+    background-size: 48px 48px;
+  }
+}
