@@ -110,7 +110,7 @@ export const REPORTS: InsightReport[] = [
     featured: false,
     url: "https://www.notion.so/Glory-Insight-April-2026-Monthly-Brief-354dd2386dd280d5a07bca831720166c?v=337dd2386dd280039629000cfb1b85a5&source=copy_link",
     pdfUrl: "/reports/glory-insight-april-2026-monthly-brief.pdf",
-    image: null,
+    image: '/images/reports/q1-report-banner.jpg',
   },
   {
     id: 'may-2026-monthly-brief',
