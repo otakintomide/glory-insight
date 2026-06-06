@@ -123,7 +123,7 @@ export const REPORTS: InsightReport[] = [
       'Monthly update on product development, community growth, and ecosystem expansion.',
     status: 'published',
     featured: false,
-    url: "https://www.notion.so/Glory-Insight-May-2026-Monthly-Brief-354dd2386dd280d5a07bca831720166c?v=337dd2386dd280039629000cfb1b85a5&source=copy_link",
+    url: "https://app.notion.com/p/Glory-Insight-May-2026-Monthly-Brief-377dd2386dd28032b405c1df8c7e75f4?v=337dd2386dd280039629000cfb1b85a5",
     pdfUrl: "/reports/glory-insight-may-2026-monthly-brief.pdf",
     image: '/images/reports/q1-report-banner.jpg',
   },
