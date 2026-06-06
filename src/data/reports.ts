@@ -121,10 +121,10 @@ export const REPORTS: InsightReport[] = [
     year: 2026,
     summary:
       'Monthly update on product development, community growth, and ecosystem expansion.',
-    status: 'Coming Soon',
+    status: 'published',
     featured: false,
-    url: null,
-    pdfUrl: null,
-    image: null,
+    url: "https://www.notion.so/Glory-Insight-May-2026-Monthly-Brief-354dd2386dd280d5a07bca831720166c?v=337dd2386dd280039629000cfb1b85a5&source=copy_link",
+    pdfUrl: "/reports/glory-insight-may-2026-monthly-brief.pdf",
+    image: '/images/reports/q1-report-banner.jpg',
   },
 ];
