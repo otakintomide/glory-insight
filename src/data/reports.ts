@@ -79,23 +79,23 @@ export function sortReportsForDisplay(entries: readonly InsightReport[]): Insigh
   return sortGloryReportsForDisplay(entries);
 }
 
-const Q1_2026_NOTION_URL =
-  'https://awake-crowd-3c6.notion.site/Glory-Insight-Q1-2026-Strategic-Report-337dd2386dd2807aafeaed94ab27c68f';
+const Q2_2026_NOTION_URL =
+  'https://www.notion.so/Glory-Insight-Q2-2026-Strategic-Report-337dd2386dd2807aafeaed94ab27c68f';
 
 export const REPORTS: InsightReport[] = [
   {
-    id: 'q1-2026-strategic-report',
-    title: 'Glory Insight — Q1 2026 Strategic Report',
+    id: 'q2-2026-strategic-report',
+    title: 'Glory Insight — Q2 2026 Strategic Report',
     type: 'Quarterly',
-    period: 'Q1 2026',
-    publishDate: '2026-03-31',
+    period: 'Q2 2026',
+    publishDate: '2026-06-30',
     year: 2026,
     summary:
-      'The first official Glory Insight strategic report covering ecosystem development, infrastructure progress, and market context for Q1 2026.',
+      'Glory Insight Q2 strategic report covering ecosystem development, infrastructure progress, and market context for Q2 2026.',
     status: 'Published',
     featured: true,
-    url: Q1_2026_NOTION_URL,
-    pdfUrl: "/reports/glory-insight-q1-2026-strategic-report.pdf",
+    url: Q2_2026_NOTION_URL,
+    pdfUrl: "/reports/glory-insight-q2-2026-strategic-report.pdf",
     image: '/images/reports/q1-report-banner.jpg',
   },
   {
@@ -121,7 +121,7 @@ export const REPORTS: InsightReport[] = [
     year: 2026,
     summary:
       'Monthly update on product development, community growth, and ecosystem expansion.',
-    status: 'published',
+    status: 'Published',
     featured: false,
     url: "https://app.notion.com/p/Glory-Insight-May-2026-Monthly-Brief-377dd2386dd28032b405c1df8c7e75f4?v=337dd2386dd280039629000cfb1b85a5",
     pdfUrl: "/reports/glory-insight-may-2026-monthly-brief.pdf",
