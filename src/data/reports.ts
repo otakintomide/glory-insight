@@ -124,7 +124,7 @@ export const REPORTS: InsightReport[] = [
     status: 'Published',
     featured: false,
     url: "https://app.notion.com/p/Glory-Insight-May-2026-Monthly-Brief-377dd2386dd28032b405c1df8c7e75f4?v=337dd2386dd280039629000cfb1b85a5",
-    pdfUrl: "/reports/glory-insight-may-2026-monthly-brief.3pdf",
+    pdfUrl: "/reports/glory-insight-may-2026-monthly-brief.pdf",
     image: '/images/reports/q1-report-banner.jpg',
   },
 ];
