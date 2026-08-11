@@ -108,7 +108,7 @@ export const REPORTS: InsightReport[] = [
     summary: 'Monthly update on product development, community growth, and ecosystem expansion.',
     status: 'Published',
     featured: false,
-    url: "https://app.notion.com/p/Glory-Insight-July-2026-Monthly-Brief--3b9dd2386dd280b7aee5c1c54fa2d699",
+    url: "https://app.notion.com/p/Glory-Insight-July-2026-Monthly-Brief-3b9dd2386dd280b7aee5c1c54fa2d699",
     pdfUrl: "/reports/glory-insight-july-2026-monthly-brief.pdf",
     image: '/images/reports/q1-report-banner.jpg',
   },
